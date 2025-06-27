@@ -32,13 +32,22 @@ func SumIntsOrFloats[K comparable, V Number](m map[K]V) V {
 
 func main() {
 	// Example usage
-	ints := map[string]int{"a": 1, "b": 2, "c": 3}
-	floats := map[string]float64{"x": 1.1, "y": 2.2, "z": 3.3}
+	// ints := map[string]int{"a": 1, "b": 2, "c": 3}
+	// floats := map[string]float64{"x": 1.1, "y": 2.2, "z": 3.3}
 
-	fmt.Println("Sum of ints:", SumInts(ints))
-	fmt.Println("Sum of floats:", SumFloats(floats))
+	// fmt.Println("Sum of ints:", SumInts(ints))
+	// fmt.Println("Sum of floats:", SumFloats(floats))
 
-	fmt.Printf("Generic Sums: %v and %v\n",
-		SumIntsOrFloats(ints),
-		SumIntsOrFloats(floats))
+	// fmt.Printf("Generic Sums: %v and %v\n",
+	// 	SumIntsOrFloats(ints),
+	// 	SumIntsOrFloats(floats))
+
+	// Reverse String
+
+	input := "The quick brown fox jumped over the lazy dog"
+	rev, revErr := Reverse(input)
+	doubleRev, doubleRevErr := Reverse(rev)
+	fmt.Printf("original: %q\n", input)
+	fmt.Printf("reversed: %q, err: %v\n", rev, revErr)
+	fmt.Printf("reversed again: %q, err: %v\n", doubleRev, doubleRevErr)
 }
